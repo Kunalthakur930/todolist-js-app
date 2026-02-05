@@ -1,0 +1,103 @@
+body{
+  font-family: Arial, Helvetica, sans-serif;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #f2f2f2;
+}
+
+.todo{
+  width: 700px;
+  padding: 20px;
+  border-radius: 8px;
+  background: white;
+}
+
+.todo-navbar{
+  display: flex;
+  gap: 25px;
+}
+
+.heading-name{
+  display: flex;
+  justify-content: center;
+  font-size: 26px;
+}
+
+.taskinput {
+      width: 50%;
+      padding: 5px;
+      height: 25px;
+      font-size: 18px;
+    }
+.dateinput1 {
+      width: 40%;
+      padding: 5px;
+      height: 25px;
+      font-size: 18px;
+    }
+
+button {
+      padding: 6px;
+      height: 40px;
+      width: 70px;
+      cursor: pointer;
+      background-color: green;
+      color: white;
+      border: none;
+      border-radius: 6px;
+      font-size: 18px;
+      margin-left: 35px;
+}
+
+/* li {
+      margin-top: 10px;
+      font-size: 20px;
+} */
+
+.list-container{
+  list-style: none;
+  padding: 0;
+  margin-top: 20px;
+}
+
+
+.task-row {
+  display: flex;
+  gap: 25px;
+  padding: 8px 0px;
+  align-items: center;
+
+
+}
+
+
+.taskinput,
+.task-col {
+  width: 50%;
+  
+}
+
+.date-col {
+  width: 40%;
+  margin-left: 16px;
+}
+
+
+.btn-col {
+  width: 100px;
+  margin-right: 8px;
+}
+
+.delete-btn {
+  background: red;
+  color: white;
+  border: none;
+  padding: 6px;
+  margin-right: 6px;
+  height: 40px;
+  width: 70px;
+  border-radius: 5px;
+  cursor: pointer;
+}

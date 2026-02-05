@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Todo App</title>
+  <link rel="stylesheet" href="Style.css">
+</head>
+<body>
+  <div class="todo">
+    <h1 class="heading-name">Todo List</h1>
+    <div class="todo-navbar">
+    <input type="text" id="task" placeholder="Please enter task" class="taskinput"/>
+    <input type="date" id="taskdate" class="dateinput1"/>
+    <button onclick="addtask()">Add</button>
+    </div>
+    <ul id="list" class="list-container">
+    
+     </ul>
+  </div>
+
+  <script>
+    
+  function addtask() {
+    const task = document.getElementById("task").value;
+    const date = document.getElementById("taskdate").value;
+
+    if (task === "" || date === "") {
+      alert("Please enter task and date");
+      return;
+    }
+
+    // create li row
+    const li = document.createElement("li");
+    li.className = "task-row";
+
+    // column 1 - task
+    const taskDiv = document.createElement("div");
+    taskDiv.className = "task-col";
+    taskDiv.innerText = task;
+
+    // column 2 - date
+    const dateDiv = document.createElement("div");
+    dateDiv.className = "date-col";
+    dateDiv.innerText = date;
+    
+    // delete button column
+    const deleteDiv = document.createElement("div");
+    deleteDiv.className = "btn-col";
+
+    const deleteBtn = document.createElement("button");
+    deleteBtn.innerText = "Delete";
+    deleteBtn.className = "delete-btn";
+
+    // delete functionality
+    deleteBtn.onclick = function () {
+      li.remove();
+    };
+
+    deleteDiv.appendChild(deleteBtn);
+    
+    // append columns to row
+    li.appendChild(taskDiv);
+    li.appendChild(dateDiv);
+    li.appendChild(deleteDiv);
+
+    // add row to list
+    document.getElementById("list").appendChild(li);
+
+    // clear inputs
+    document.getElementById("task").value = "";
+    document.getElementById("taskdate").value = "";
+  }
+
+  </script>
+</body>
+</html>
